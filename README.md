@@ -10,10 +10,16 @@ Future development timeline: to be added.
 
 Other info: to be added.
 
-Current app version: 0.0.2
+Current app version: 0.0.5 (buggy) in the side branch and the original (version 0.0.0) first draft in the main branch
 
 Current error encounter: 
-�x��: Schema export directory was not provided to the annotation processor so Room cannot export the schema. You can either provide `room.schemaLocation` annotation processor argument by applying the Room Gradle plugin (id 'androidx.room') OR set exportSchema to false.
+1. �x��: Schema export directory was not provided to the annotation processor so Room cannot export the schema. You can either provide `room.schemaLocation` annotation processor argument by applying the Room Gradle plugin (id 'androidx.room') OR set exportSchema to false.
 public abstract class NoteDatabase extends androidx.room.RoomDatabase {
 
-More details are in the Issues page. 
+More details are on the Issues page. ERROR FIXED!!!
+
+2. Database building error
+
+3. MVVM structure design problem
+
+4. version control problem
