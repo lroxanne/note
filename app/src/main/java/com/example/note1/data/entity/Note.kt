@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Note(
 
-    @PrimaryKey(autoGenerate = true) val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val title: String?,
     val content: String?,
     val date: Long
