@@ -9,3 +9,11 @@ Information and introduction about our app: to be added.
 Future development timeline: to be added.
 
 Other info: to be added.
+
+Current app version: 0.0.2
+
+Current error encounter: 
+�x��: Schema export directory was not provided to the annotation processor so Room cannot export the schema. You can either provide `room.schemaLocation` annotation processor argument by applying the Room Gradle plugin (id 'androidx.room') OR set exportSchema to false.
+public abstract class NoteDatabase extends androidx.room.RoomDatabase {
+
+More details are in the Issues page. 
