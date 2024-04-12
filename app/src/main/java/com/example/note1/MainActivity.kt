@@ -1,7 +1,9 @@
 package com.example.note1
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.widget.ImageView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -14,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.note1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    var REQUEST_CODE_ADD_NOTE =1
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
@@ -27,6 +29,9 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.fab.setOnClickListener { view ->
+            val intent = Intent(this, CreateNoteActivity::class.java)
+            intent.putExtra("requestCode", REQUEST_CODE_ADD_NOTE)
+            startActivity(intent)
             Snackbar.make(view, "Add new note", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
