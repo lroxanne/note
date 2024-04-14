@@ -45,22 +45,45 @@
             android:layout_height="@dimen/_20sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_search"/>
+
         <EditText
             android:id="@+id/inputSearch"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
-            android:layout_marginStart="@dimen/_12sdp"
             android:background="@null"
             android:hint="Search notes"
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
             android:includeFontPadding="false"
             android:inputType="text"
-            android:textSize= "@dimen/_13ssp"/>
+            android:textSize="@dimen/_13ssp" />
 
 
-   </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Layoutsearch"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="58dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="@+id/notesRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
-    
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

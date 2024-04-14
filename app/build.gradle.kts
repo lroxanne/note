@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("kotlin-kapt")
+    id("kotlin-parcelize")
+
 }
 
 android {
@@ -41,6 +44,7 @@ android {
 dependencies {
     implementation("com.makeramen:roundedimageview:2.3.0")
     implementation("androidx.core:core-ktx:1.12.0")
+    implementation ("com.google.dagger:hilt-android:2.39.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -50,6 +54,8 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
     implementation("androidx.room:room-runtime:2.2.5")
     annotationProcessor ("androidx.room:room-compiler:2.2.5")
+    kapt("androidx.room:room-compiler:2.39.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0")
     implementation("androidx.recyclerview:recyclerview:1.1.0")
     implementation("com.intuit.sdp:sdp-android:1.0.6")
     implementation("com.intuit.ssp:ssp-android:1.0.6")

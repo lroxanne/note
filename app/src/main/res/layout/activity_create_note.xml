@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateNoteActivity">
+    tools:context=".MainActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,37 +16,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:animateLayoutChanges="true">
-            <ImageView
-                android:id="@+id/imageBack"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginEnd="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_back"
-                app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintTop_toTopOf="parent"
-                />
-
-            <ImageView
-                android:id="@+id/imageDone"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_done"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/imageBack" />
 
             <EditText
                 android:id="@+id/inputNoteTitle"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_marginStart="@dimen/_12sdp"
-                android:layout_marginEnd="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_15sdp"
                 android:background="@null"
                 android:hint="note title"
                 android:imeOptions="actionDone"
@@ -54,7 +28,8 @@
                 android:includeFontPadding="false"
                 android:inputType="text"
                 android:textSize="@dimen/_16sdp"
-                app:layout_constraintTop_toBottomOf="@id/imageBack" />
+                app:layout_constraintTop_toBottomOf="@+id/backButton"
+                tools:layout_editor_absoluteX="16dp" />
             <TextView
                 android:id="@+id/textDateTime"
                 android:layout_width="0dp"
@@ -64,12 +39,11 @@
                 app:layout_constraintEnd_toEndOf="@id/inputNoteTitle"
                 app:layout_constraintStart_toStartOf="@id/inputNoteTitle"
                 app:layout_constraintTop_toBottomOf="@id/inputNoteTitle"/>
+
             <EditText
                 android:id="@+id/inputNote"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_marginStart="@dimen/_12sdp"
-                android:layout_marginEnd="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:background="@null"
                 android:hint="note goes here"
@@ -79,8 +53,28 @@
                 android:inputType="text"
                 android:textSize="@dimen/_16sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/inputNoteTitle"
-                 />
+                app:layout_constraintTop_toBottomOf="@id/textDateTime"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="15dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/doneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="28dp"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_done" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
