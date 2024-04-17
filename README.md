@@ -1,4 +1,6 @@
 Our group project is a powerful mobile note app. 
+This is Old repo，We made a new repo which continuing working on things in old repo but more organized: 
+new repo: https://github.com/lroxanne/Notes_App
 
 Link to our first presentation slide: https://docs.google.com/presentation/d/1-PhKBUz6BZXjfQ-_IoqxucheBnkmnISiEKFgLeH91r8/edit?usp=sharing
 
